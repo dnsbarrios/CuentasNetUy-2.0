@@ -1,150 +1,191 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cuentas NetUy</title>
-  <link rel="stylesheet" href="./css/style.css" />
-</head>
-<body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Cuentas NetUy</div>
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#combos">Combos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <div class="cart-icon">🛒</div>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuentas NetUy</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">Cuentas NetUy</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="./pages/servicios.html">Servicios</a></li>
+          <li><a href="./pages/combos.html">Combos</a></li>
+          <li><a href="./pages/contacto.html">Contacto</a></li>
+        </ul>
+        <div class="cart-icon">🛒</div>
+      </nav>
+    </header>
 
-  <!-- Hero Carrusel -->
-  <section id="inicio" class="carousel-container">
-    <div class="carousel">
-      <div class="slide active"><img src="https://i.imgur.com/d1hRtW3.png" alt="Netflix" /></div>
-      <div class="slide"><img src="https://i.imgur.com/Jj8pJGw.png" alt="Spotify" /></div>
-      <div class="slide"><img src="https://i.imgur.com/wMxF6Be.png" alt="Disney+" /></div>
-    </div>
-    <div class="carousel-dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-  </section>
+    <!--Carrusel -->
+    <section id="inicio" class="carousel-container">
+      <div class="carousel">
+        <div class="slide active">
+          <img src="./img/netflix.png" alt="Netflix" />
+        </div>
+        <div class="slide">
+          <img src="./img/spotify.png" alt="Spotify" />
+        </div>
+        <div class="slide">
+          <img src="./img/disney.png" alt="Disney+" />
+        </div>
+      </div>
+      <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
 
-  <!-- Contenido futuro -->
-  <main>
-    <section id="servicios">
+    <!-- Contenido futuro -->
+    <main>
+      <section id="servicios">
+        <h2>Servicios disponibles</h2>
         <div class="card-grid">
-  <div class="service-card">
-    <img src="./assets/img/Netflix-Logo-400x200.png" alt="Netflix">
-    <h3>Netflix Basico</h3>
-    <p>$390</p>
-    <span class="flag">Basic</span>
-  </div>
+          <div class="service-card">
+            <img src="./img/netflix.png" alt="Netflix" />
+            <h3>Netflix Basico</h3>
+            <p>$390</p>
+            <span class="flag">Basic</span>
+          </div>
 
-  <div class="service-card">
-    <img src="https://i.imgur.com/wMxF6Be.png" alt="Netflix">
-    <h3>Netflix Estandar</h3>
-    <p>$520</p>
-    <span class="flag">Estandar</span>
-  </div>
+          <div class="service-card">
+            <img src="./img/netflix.png" alt="Netflix" />
+            <h3>Netflix Estandar</h3>
+            <p>$520</p>
+            <span class="flag">Estandar</span>
+          </div>
 
-  <div class="service-card">
-    <img src="https://i.imgur.com/Jj8pJGw.png" alt="Spotify">
-    <h3>Spotify</h3>
-    <p>$300</p>
-    <span class="flag">🎧</span>
-  </div>
+          <div class="service-card">
+            <img src="./img/netflix.png" alt="Netflix" />
+            <h3>Netflix Premium</h3>
+            <p>$680</p>
+            <span class="flag">Premium</span>
+          </div>
 
-  <div class="service-card">
-    <img src="https://i.imgur.com/GwK1qzZ.png" alt="Disney+">
-    <h3>Disney+</h3>
-    <p>$640</p>
-    <span class="flag">🎬</span>
-  </div>
-</div>
+          <div class="service-card">
+            <img src="./img/spotify.png" alt="Spotify" />
+            <h3>Spotify</h3>
+            <p>$300</p>
+            <span class="flag">🎧</span>
+          </div>
 
-      <h2>Servicios disponibles</h2>
-      <!-- Aquí irán los cards por país o tipo de plan -->
-    </section>
+          <div class="service-card">
+            <img src="./img/disney.png" alt="Disney+" />
+            <h3>Disney+</h3>
+            <p>$640</p>
+            <span class="flag">🎬</span>
+          </div>
+          <div class="service-card">
+            <img src="./img/netflix.png" alt="Netflix" />
+            <h3>Netflix Basico</h3>
+            <p>$390</p>
+            <span class="flag">Basic</span>
+          </div>
+        </div>
 
-    <section id="combos">
+        <!-- Aquí irán las cards por plan -->
+      </section>
+
+      <section id="combos">
+        <h2>Combos destacados</h2>
         <div class="combo-grid">
+          <div class="combo-card">
+            <h3>🎯 Combo Esencial</h3>
+            <ul>
+              <li>Netflix Estándar (2 pantallas)</li>
+              <li>Flujo TV</li>
+            </ul>
+            <p class="old-price">$1.000</p>
+            <p class="new-price">
+              $750 <span class="ahorro">Ahorrás $250</span>
+            </p>
+            <a
+              href="https://wa.me/598XXXXXXXX?text=Hola,%20quiero%20activar%20el%20Combo%20Esencial"
+              class="combo-btn"
+              target="_blank"
+              >Activar por WhatsApp</a
+            >
+          </div>
 
-  <div class="combo-card">
-    <h3>🎯 Combo Esencial</h3>
-    <ul>
-      <li>Netflix Estándar (2 pantallas)</li>
-      <li>Flujo TV</li>
-    </ul>
-    <p class="old-price">$1.000</p>
-    <p class="new-price">$750 <span class="ahorro">Ahorrás $250</span></p>
-    <a href="https://wa.me/598XXXXXXXX?text=Hola,%20quiero%20activar%20el%20Combo%20Esencial" class="combo-btn" target="_blank">Activar por WhatsApp</a>
-  </div>
+          <div class="combo-card">
+            <h3>💤 Combo Relax</h3>
+            <ul>
+              <li>Prime Video</li>
+              <li>Disney+ Pantalla</li>
+              <li>MAX Pantalla</li>
+            </ul>
+            <p class="old-price">$720</p>
+            <p class="new-price">
+              $550 <span class="ahorro">Ahorrás $170</span>
+            </p>
+            <a
+              href="https://wa.me/598XXXXXXXX?text=Hola,%20quiero%20activar%20el%20Combo%20Relax"
+              class="combo-btn"
+              target="_blank"
+              >Activar por WhatsApp</a
+            >
+          </div>
 
-  <div class="combo-card">
-    <h3>💤 Combo Relax</h3>
-    <ul>
-      <li>Prime Video</li>
-      <li>Disney+ Pantalla</li>
-      <li>MAX Pantalla</li>
-    </ul>
-    <p class="old-price">$720</p>
-    <p class="new-price">$550 <span class="ahorro">Ahorrás $170</span></p>
-    <a href="https://wa.me/598XXXXXXXX?text=Hola,%20quiero%20activar%20el%20Combo%20Relax" class="combo-btn" target="_blank">Activar por WhatsApp</a>
-  </div>
+          <!-- Podés agregar más combos con este mismo formato -->
+        </div>
 
-  <!-- Podés agregar más combos con este mismo formato -->
+        <!-- Aquí irán los combos destacados -->
+      </section>
 
-</div>
-
-      <h2>Combos promocionales</h2>
-      <!-- Aquí irán los combos destacados -->
-    </section>
-
-    <section id="contacto">
+      <section id="contacto">
         <div class="contact-form">
-  <div class="contact-form">
-  <form id="whatsappForm">
-  <label for="nombre">Nombre</label>
-  <input type="text" id="nombre" required>
+          <div class="contact-form">
+            <form id="whatsappForm">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" required />
 
-  <label for="combo">Seleccioná un combo</label>
-  <select id="combo" required>
-    <option value="" disabled selected>Elegí un combo</option>
-    <option value="Combo Esencial">Combo Esencial</option>
-    <option value="Combo Relax">Combo Relax</option>
-    <option value="Combo Gamer/Anime">Combo Gamer/Anime</option>
-    <option value="Combo Full Cine">Combo Full Cine</option>
-    <option value="Combo Familiar">Combo Familiar</option>
-    <option value="Combo Smart">Combo Smart</option>
-    <option value="Combo Premium Ahorro">Combo Premium Ahorro</option>
-  </select>
+              <label for="combo">Seleccioná un combo</label>
+              <select id="combo" required>
+                <option value="" disabled selected>Elegí un combo</option>
+                <option value="Combo Esencial">Combo Esencial</option>
+                <option value="Combo Relax">Combo Relax</option>
+                <option value="Combo Gamer/Anime">Combo Gamer/Anime</option>
+                <option value="Combo Full Cine">Combo Full Cine</option>
+                <option value="Combo Familiar">Combo Familiar</option>
+                <option value="Combo Smart">Combo Smart</option>
+                <option value="Combo Premium Ahorro">
+                  Combo Premium Ahorro
+                </option>
+              </select>
 
-  <label for="mensaje">Mensaje</label>
-  <textarea id="mensaje" rows="4" placeholder="Escribí alguna consulta o preferencia..." required></textarea>
+              <label for="mensaje">Mensaje</label>
+              <textarea
+                id="mensaje"
+                rows="4"
+                placeholder="Escribí alguna consulta o preferencia..."
+                required
+              ></textarea>
 
-  <button type="submit">Enviar por WhatsApp</button>
-</form>
+              <button type="submit">Enviar por WhatsApp</button>
+            </form>
+          </div>
+        </div>
 
-</div>
+        <h2>Contacto</h2>
+        <p>Escribinos por WhatsApp para activar tu cuenta</p>
+        <a
+          href="https://wa.me/598XXXXXXXX"
+          target="_blank"
+          class="whatsapp-button"
+          >Chatear por WhatsApp</a
+        >
+      </section>
+    </main>
 
-</div>
+    <footer>
+      <p>&copy; 2025 Cuentas NetUy</p>
+    </footer>
 
-      <h2>Contacto</h2>
-      <p>Escribinos por WhatsApp para activar tu cuenta</p>
-      <a href="https://wa.me/598XXXXXXXX" target="_blank" class="whatsapp-button">Chatear por WhatsApp</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Cuentas NetUy</p>
-  </footer>
-
-  <script src="./js/scrip.js"></script>
-</body>
+    <script src="./js/scrip.js"></script>
+  </body>
 </html>
