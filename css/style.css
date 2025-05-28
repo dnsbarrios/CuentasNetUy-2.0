@@ -13,7 +13,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #007bff;
+  background-color: #f5f575;
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -25,8 +25,14 @@ body {
 }
 
 .logo {
+  color: rgb(0, 0, 0);
   font-size: 1.5rem;
   font-weight: bold;
+}
+.logo img {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
 }
 
 .nav-links {
@@ -36,7 +42,7 @@ body {
 }
 
 .nav-links li a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: 500;
 }
@@ -290,4 +296,85 @@ footer {
 
 .contact-form button:hover {
   background-color: #005dc1;
+}
+
+.simulador-combos {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #f7f9fc;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.simulador-combos h2 {
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.checkbox-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.resultado-combo {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  background: #e9f7ff;
+  padding: 1rem;
+  border-left: 4px solid #007bff;
+  border-radius: 5px;
+}
+
+.combo-btn {
+  background: #007bff;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.combo-btn:hover {
+  background-color: #005dc1;
+}
+
+.combo-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.combo-icon {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.combo-icon img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.combo-icon span {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.combo-icon.active {
+  border-color: #007bff;
+  background: #e6f2ff;
+  box-shadow: 0 0 10px rgba(0,123,255,0.3);
 }
