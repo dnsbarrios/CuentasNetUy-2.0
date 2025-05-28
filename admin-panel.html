@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Panel de Administración – Cuentas NetUy</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/data/precios-combos.json" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 2rem;
+        background: #f4f6f8;
+      }
+      h1 {
+        margin-bottom: 1rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        margin-bottom: 2rem;
+      }
+      th,
+      td {
+        padding: 0.7rem;
+        border: 1px solid #ccc;
+      }
+      th {
+        background: #007bff;
+        color: white;
+      }
+      input[type="number"],
+      input[type="text"] {
+        width: 100%;
+        padding: 0.3rem;
+        font-size: 0.95rem;
+      }
+      button {
+        padding: 0.6rem 1rem;
+        margin-top: 1rem;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #005dc1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📊 Panel de Administración</h1>
+    <h2>Servicios individuales</h2>
+    <table id="tablaServicios"></table>
+
+    <h2>Combos promocionales</h2>
+    <table id="tablaCombos"></table>
+
+    <button onclick="guardarCambios()">💾 Guardar Cambios</button>
+
+    <script>
+      let datos;
+
+      fetch("data/precios-combos.json")
+        .then((response) => response.json())
+        .then((json) => {
+          datos = json;
+          renderServicios();
+          renderCombos();
+        });
+
+      function renderServicios() {
+        const tabla = document.getElementById("tablaServicios");
+        tabla.innerHTML = "<tr><th>Servicio</th><th>Precio</th></tr>";
+        datos.servicios.forEach((s, i) => {
+          tabla.innerHTML += `
+          <tr>
+            <td><input type="text" value="${s.nombre}" data-index="${i}" data-tipo="nombreServicio"></td>
+            <td><input type="number" value="${s.precio}" data-index="${i}" data-tipo="precioServicio"></td>
+          </tr>
+        `;
+        });
+      }
+
+      function renderCombos() {
+        const tabla = document.getElementById("tablaCombos");
+        tabla.innerHTML =
+          "<tr><th>Combo</th><th>Servicios</th><th>Precio</th></tr>";
+        datos.combos.forEach((c, i) => {
+          tabla.innerHTML += `
+          <tr>
+            <td><input type="text" value="${
+              c.nombre
+            }" data-index="${i}" data-tipo="nombreCombo"></td>
+            <td><input type="text" value="${c.servicios.join(
+              ", "
+            )}" data-index="${i}" data-tipo="serviciosCombo"></td>
+            <td><input type="number" value="${
+              c.precio
+            }" data-index="${i}" data-tipo="precioCombo"></td>
+          </tr>
+        `;
+        });
+      }
+
+      function guardarCambios() {
+        const inputs = document.querySelectorAll("input");
+
+        inputs.forEach((input) => {
+          const index = input.dataset.index;
+          const tipo = input.dataset.tipo;
+          if (tipo === "nombreServicio")
+            datos.servicios[index].nombre = input.value;
+          if (tipo === "precioServicio")
+            datos.servicios[index].precio = parseInt(input.value);
+          if (tipo === "nombreCombo") datos.combos[index].nombre = input.value;
+          if (tipo === "serviciosCombo")
+            datos.combos[index].servicios = input.value
+              .split(",")
+              .map((s) => s.trim());
+          if (tipo === "precioCombo")
+            datos.combos[index].precio = parseInt(input.value);
+        });
+
+        const json = JSON.stringify(datos, null, 2);
+        const blob = new Blob([json], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "precios-combos.json";
+        a.click();
+      }
+    </script>
+  </body>
+</html>

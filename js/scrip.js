@@ -26,16 +26,16 @@ dots.forEach((dot, i) => {
 });
 
 // Seccion de contacto a WhatsApp
-document.getElementById("whatsappForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const nombre = document.getElementById("nombre").value.trim();
-  const combo = document.getElementById("combo").value;
-  const mensaje = document.getElementById("mensaje").value.trim();
-  const telefono = "598XXXXXXXX"; // Reemplazá con tu número
+document
+  .getElementById("whatsappForm")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+    const nombre = document.getElementById("nombre").value.trim();
+    const combo = document.getElementById("combo").value;
+    const mensaje = document.getElementById("mensaje").value.trim();
+    const telefono = "598XXXXXXXX"; // Reemplazá con tu número
 
-  const texto = `Hola, soy ${nombre}.%0AQuiero el *${combo}*.%0A${mensaje}`;
-  const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
-  window.open(url, '_blank');
-});
-
-
+    const texto = `Hola, soy ${nombre}.%0AQuiero el *${combo}*.%0A${mensaje}`;
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
+    window.open(url, "_blank");
+  });

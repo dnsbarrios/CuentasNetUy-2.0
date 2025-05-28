@@ -1,0 +1,68 @@
+{
+  "servicios": [
+    { "nombre": "Netflix Básico", "precio": 390 },
+    { "nombre": "Netflix Estándar", "precio": 520 },
+    { "nombre": "Netflix Premium", "precio": 680 },
+    { "nombre": "Disney+ Cuenta", "precio": 640 },
+    { "nombre": "Disney+ Pantalla", "precio": 310 },
+    { "nombre": "Flujo TV", "precio": 480 },
+    { "nombre": "Spotify", "precio": 300 },
+    { "nombre": "Amazon Prime", "precio": 390 },
+    { "nombre": "MAX", "precio": 380 },
+    { "nombre": "Paramount+", "precio": 230 },
+    { "nombre": "ViX", "precio": 220 },
+    { "nombre": "Crunchyroll", "precio": 190 }
+  ],
+  "combos": [
+    {
+      "nombre": "Combo Esencial",
+      "servicios": ["Netflix Estándar", "Flujo TV"],
+      "precio": 750
+    },
+    {
+      "nombre": "Combo Relax",
+      "servicios": ["Amazon Prime", "Disney+ Pantalla", "MAX"],
+      "precio": 550
+    },
+    {
+      "nombre": "Combo Gamer",
+      "servicios": ["Crunchyroll", "Spotify", "Flujo TV"],
+      "precio": 600
+    },
+    {
+      "nombre": "Combo Full Cine",
+      "servicios": ["Netflix Premium", "MAX", "Paramount+"],
+      "precio": 950
+    },
+    {
+      "nombre": "Combo Familiar",
+      "servicios": ["Netflix Estándar", "Disney+ Cuenta", "Spotify"],
+      "precio": 1100
+    },
+    {
+      "nombre": "Combo Smart",
+      "servicios": ["Netflix Estándar", "Disney+ Pantalla"],
+      "precio": 790
+    },
+    {
+      "nombre": "Combo Premium Ahorro",
+      "servicios": ["Netflix Premium", "Disney+ Pantalla"],
+      "precio": 920
+    },
+    {
+      "nombre": "Combo Smart Solo",
+      "servicios": ["Netflix Básico", "Disney+ Pantalla"],
+      "precio": 640
+    },
+    {
+      "nombre": "Combo Basico + Prime",
+      "servicios": ["Netflix Básico", "Amazon Prime"],
+      "precio": 710
+    },
+    {
+      "nombre": "Combo Triple Streaming",
+      "servicios": ["Netflix Básico", "Amazon Prime", "Spotify"],
+      "precio": 960
+    }
+  ]
+}
