@@ -33,7 +33,7 @@ document
     const nombre = document.getElementById("nombre").value.trim();
     const combo = document.getElementById("combo").value;
     const mensaje = document.getElementById("mensaje").value.trim();
-    const telefono = "598XXXXXXXX"; // Reemplazá con tu número
+    const telefono = "59895100778"; // Reemplazá con tu número
 
     const texto = `Hola, soy ${nombre}.%0AQuiero el *${combo}*.%0A${mensaje}`;
     const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
