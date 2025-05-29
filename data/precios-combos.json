@@ -1,17 +1,62 @@
 {
   "servicios": [
-    { "nombre": "Netflix Básico", "precio": 390 },
-    { "nombre": "Netflix Estándar", "precio": 520 },
-    { "nombre": "Netflix Premium", "precio": 680 },
-    { "nombre": "Disney+ Cuenta", "precio": 640 },
-    { "nombre": "Disney+ Pantalla", "precio": 310 },
-    { "nombre": "Flujo TV", "precio": 480 },
-    { "nombre": "Spotify", "precio": 300 },
-    { "nombre": "Amazon Prime", "precio": 390 },
-    { "nombre": "MAX", "precio": 380 },
-    { "nombre": "Paramount+", "precio": 230 },
-    { "nombre": "ViX", "precio": 220 },
-    { "nombre": "Crunchyroll", "precio": 190 }
+    {
+      "nombre": "Netflix Básico",
+      "precio": 390,
+      "imagen": "../img/netflix.png"
+    },
+    {
+      "nombre": "Netflix Estándar",
+      "precio": 520,
+      "imagen": "../img/netflix.png"
+    },
+    {
+      "nombre": "Netflix Premium",
+      "precio": 680,
+      "imagen": "../img/netflix.png"
+    },
+    {
+      "nombre": "Disney+ Cuenta",
+      "precio": 640,
+      "imagen": "../img/discuenta.jpeg"
+    },
+    {
+      "nombre": "Disney+ Pantalla",
+      "precio": 310,
+      "imagen": "../img/dispantalla.jpeg"
+    },
+    { "nombre": "Max", "precio": 380, "imagen": "../img/maxcuenta.jpeg" },
+    {
+      "nombre": "MAX Pantalla",
+      "precio": 140,
+      "imagen": "../img/maxpantalla.jpeg"
+    },
+
+    {
+      "nombre": "Paramount+ Pantalla",
+      "precio": 120,
+      "imagen": "../img/paramountpantalla.jpeg"
+    },
+    {
+      "nombre": "Paramount+ Cuenta",
+      "precio": 230,
+      "imagen": "../img/paramoncuenta.jpeg"
+    },
+    { "nombre": "Flujo TV", "precio": 480, "imagen": "../img/flu.jpeg" },
+    { "nombre": "Spotify", "precio": 300, "imagen": "../img/spotunmes.jpeg" },
+    { "nombre": "Amazon Prime", "precio": 390, "imagen": "../img/prime.jpeg" },
+
+    { "nombre": "VIX", "precio": 220, "imagen": "../img/vixcuenta.jpeg" },
+    {
+      "nombre": "VIX Pantalla",
+      "precio": 120,
+      "imagen": "../img/vixpantalla.jpeg"
+    },
+    {
+      "nombre": "Crunchyroll",
+      "precio": 190,
+      "imagen": "../img/crun-cuenta.jpeg"
+    }
   ],
   "combos": [
     {

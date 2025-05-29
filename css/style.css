@@ -303,7 +303,7 @@ footer {
 }
 
 .simulador-combos {
-  max-width: 700px;
+  max-width: 90%;
   margin: 2rem auto;
   background: #f7f9fc;
   padding: 2rem;
@@ -366,8 +366,9 @@ footer {
 }
 
 .combo-icon img {
-  width: 40px;
-  height: 40px;
+  border-radius: 5%;
+  width: 100%;
+  height: auto;
   margin-bottom: 0.5rem;
 }
 

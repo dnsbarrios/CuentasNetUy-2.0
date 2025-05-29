@@ -209,7 +209,7 @@
               data-precio="390"
               data-servicio="Netflix Básico"
             >
-              <img src="../img/crun-cuenta.svg" alt="Netflix" />
+              <img src="../img/netflix.png" alt="Netflix" />
               <span>Netflix Básico<br />$390</span>
             </div>
             <div
@@ -312,11 +312,9 @@
             div.setAttribute("data-servicio", s.nombre);
             div.setAttribute("data-precio", s.precio);
             div.innerHTML = `
-        <img src="img/${s.nombre.split(" ")[0].toLowerCase()}.svg" alt="${
-              s.nombre
-            }">
-        <span>${s.nombre}<br>$${s.precio}</span>
-      `;
+  <img src="${s.imagen}" alt="${s.nombre}">
+  <span>${s.nombre}<br>$${s.precio}</span>
+`;
             div.addEventListener("click", () => toggleSeleccion(div));
             comboGrid.appendChild(div);
           });
