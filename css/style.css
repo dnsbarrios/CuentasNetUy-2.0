@@ -12,44 +12,6 @@ body {
 }
 
 /* Navbar */
-.navbar {
-  background-color: #f5f575;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  color: rgb(0, 0, 0);
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.logo img {
-  width: 50px;
-  height: auto;
-  vertical-align: middle;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links li a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.cart-icon {
-  font-size: 1.3rem;
-}
 
 /* Carrusel */
 .carousel-container {
