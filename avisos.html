@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Envío de Avisos – Cuentas NetUy</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 2rem;
+        background: #f5f7fa;
+      }
+      h2 {
+        margin-bottom: 1rem;
+      }
+      textarea {
+        width: 100%;
+        height: 120px;
+        margin-bottom: 1rem;
+        padding: 0.7rem;
+        font-size: 1rem;
+      }
+      button {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 1rem;
+      }
+      button:hover {
+        background: #218838;
+      }
+      .nota {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>📣 Envío Rápido de Avisos por WhatsApp</h2>
+
+    <label
+      ><strong>Números (uno por línea, con código país sin "+"):</strong></label
+    >
+    <textarea id="numeros" placeholder="Ej: 59891234567"></textarea>
+
+    <label><strong>Mensaje a enviar:</strong></label>
+    <textarea
+      id="mensaje"
+      placeholder="Ej: Hola, te recordamos que tu servicio vence hoy..."
+    ></textarea>
+
+    <button onclick="enviarTodos()">✅ Enviar mensajes</button>
+
+    <p class="nota">
+      Se abrirán hasta 10 pestañas nuevas automáticamente. Solo deberás hacer
+      clic en 'Enviar' en cada chat.
+    </p>
+
+    <script>
+      function enviarTodos() {
+        const numeros = document
+          .getElementById("numeros")
+          .value.split(/\n|,/)
+          .map((n) => n.trim())
+          .filter((n) => n);
+        const mensaje = encodeURIComponent(
+          document.getElementById("mensaje").value
+        );
+        let i = 0;
+
+        function abrirChat() {
+          if (i >= numeros.length || i >= 10) return;
+          const url = `https://web.whatsapp.com/send?phone=598${numeros[i]}&text=${mensaje}`;
+          window.open(url, "_blank");
+          i++;
+          setTimeout(abrirChat, 1000); // Espera 1 segundo entre cada pestaña
+        }
+
+        abrirChat();
+      }
+    </script>
+  </body>
+</html>
