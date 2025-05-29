@@ -345,3 +345,41 @@ footer {
   background: #e6f2ff;
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
 }
+
+/* Contador flotante */
+.combo-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.combo-bar.hidden {
+  transform: translateY(100%);
+}
+
+.combo-bar-content {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.combo-bar button {
+  background-color: #0dc143;
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}

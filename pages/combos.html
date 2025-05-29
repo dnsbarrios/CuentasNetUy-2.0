@@ -314,6 +314,12 @@
         </form>
       </section>
     </main>
+    <div id="comboBar" class="combo-bar hidden">
+      <div class="combo-bar-content">
+        <span id="comboTotalText">Total: $0</span>
+        <button id="btnEnviarWA">Enviar por WhatsApp</button>
+      </div>
+    </div>
     <!-- armado de combo automatico -->
     <script>
       document.addEventListener("DOMContentLoaded", async function () {
@@ -420,6 +426,26 @@
             )}`;
             window.open(url, "_blank");
           };
+          const comboBar = document.getElementById("comboBar");
+          const comboTotalText = document.getElementById("comboTotalText");
+          const btnEnviarWA = document.getElementById("btnEnviarWA");
+
+          if (seleccionados.length > 0) {
+            comboBar.classList.remove("hidden");
+            comboTotalText.textContent = `Total: $${total.toFixed(0)}`;
+            btnEnviarWA.onclick = () => {
+              const mensaje = `Hola, quiero contratar este combo:\n- ${seleccionados
+                .map((s) => s.nombre)
+                .join("\n- ")}\nTotal: $${total.toFixed(0)}`;
+              const telefono = "598XXXXXXXX"; // tu número
+              const url = `https://wa.me/${telefono}?text=${encodeURIComponent(
+                mensaje
+              )}`;
+              window.open(url, "_blank");
+            };
+          } else {
+            comboBar.classList.add("hidden");
+          }
         }
       });
     </script>
