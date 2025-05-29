@@ -25,7 +25,11 @@
       "precio": 310,
       "imagen": "../img/dispantalla.jpeg"
     },
-    { "nombre": "Max", "precio": 380, "imagen": "../img/maxcuenta.jpeg" },
+    {
+      "nombre": "MAX Cuenta",
+      "precio": 380,
+      "imagen": "../img/maxcuenta.jpeg"
+    },
     {
       "nombre": "MAX Pantalla",
       "precio": 140,
@@ -66,7 +70,7 @@
     },
     {
       "nombre": "Combo Relax",
-      "servicios": ["Amazon Prime", "Disney+ Pantalla", "MAX"],
+      "servicios": ["Amazon Prime", "Disney+ Pantalla", "MAX Pantalla"],
       "precio": 550
     },
     {
@@ -76,7 +80,7 @@
     },
     {
       "nombre": "Combo Full Cine",
-      "servicios": ["Netflix Premium", "MAX", "Paramount+"],
+      "servicios": ["Netflix Premium", "MAX Cuenta", "Paramount+ Cuenta"],
       "precio": 950
     },
     {
